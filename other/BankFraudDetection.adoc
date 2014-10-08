@@ -60,12 +60,20 @@ CREATE (AddressInfo:DataSet {
 
 //Define data set consumer
 CREATE (MoCI)-[:IS_CONSUMING]->(PersonData)
-
 CREATE (MoMP)-[:IS_CONSUMING]->(PersonData)
-
 CREATE (MM)-[:IS_CONSUMING]->(PersonData)
-
 CREATE (SGT)-[:IS_CONSUMING]->(PersonData)
+CREATE (SGT)-[:IS_CONSUMING]->(CRData)
+CREATE (MM)-[:IS_CONSUMING]->(CRData)
+CREATE (OCCI)-[:IS_CONSUMING]->(CRData)
+CREATE (MoCI)-[:IS_CONSUMING]->(FinancialStatement)
+CREATE (MoCI)-[:IS_CONSUMING]->(NumberOfStaff)
+CREATE (SGT)-[:IS_CONSUMING]->(NumberOfStaff)
+CREATE (MoCI)-[:IS_CONSUMING]->(LeaseContract)
+CREATE (MoCI)-[:IS_CONSUMING]->(AddressInfo)
+
+
+
 
 RETURN *
 ----
