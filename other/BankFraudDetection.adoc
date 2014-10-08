@@ -19,10 +19,10 @@ CREATE (ROP:Organization {
 
 // Create DataSets
 CREATE (PersonData:DataSet {
-	Name: "Person Data")}
+	Name: "Person Data"})
 
 CREATE (CRData:DataSet {
-	Name: "CR Data")}
+	Name: "CR Data"})
 
 // Define data set owner
 CREATE (MoCI)-[:OWNS_DATASET]->(CRData)
