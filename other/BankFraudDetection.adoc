@@ -82,4 +82,13 @@ RETURN *
 
 '''
 
+[source,cypher]
+----
+MATCH (n:Organization)-[:IS_CONSUMING]->(m:DataSet)
 
+RETURN *
+----
+
+//graph
+
+'''
