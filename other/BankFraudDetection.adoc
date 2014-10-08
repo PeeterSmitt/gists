@@ -30,7 +30,7 @@ CREATE (MoCI)-[:OWNS_DATASET]->(CRData)
 CREATE (ROP)-[:OWNS_DATASET]->(PersonData)
 
 //Define data set consumer
-//CREATE (MoCI)-[IS_CONSUMING]->(PersonData)
+CREATE (MoCI)-[:IS_CONSUMING]->(PersonData)
 
 RETURN *
 ----
