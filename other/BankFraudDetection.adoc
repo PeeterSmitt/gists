@@ -35,18 +35,28 @@ CREATE (OCCI:Organization {
 
 // Create DataSets
 CREATE (PersonData:DataSet {
-	Name: "Person Data"})
+	Name: "Person Data"})<-[:IS_OWNER]-(ROP)
 
 CREATE (VisaInformation:DataSet {
 	Name: "Visa Information"})<-[:IS_OWNER]-(ROP)
 
 CREATE (CRData:DataSet {
-	Name: "CR Data"})
+	Name: "CR Data"})<-[:IS_OWNER]-(MoCI)
 
-// Define data set owner
-CREATE (MoCI)-[:OWNS_DATASET]->(CRData)
+CREATE (LicenseHolding:DataSet {
+	Name: "List of licenses for CR"})<-[:IS_OWNER]-(MoCI)
 
-CREATE (ROP)-[:OWNS_DATASET]->(PersonData)
+CREATE (FinancialStatement:DataSet {
+	Name: "Companies revenue, profit/loss statement"})<-[:IS_OWNER]-(SGT)
+
+CREATE (NumberOfStaff:DataSet {
+	Name: "Number of staff working in company"})<-[:IS_OWNER]-(MoMP)
+
+CREATE (LeaseContract:DataSet {
+	Name: "Lease contract information"})<-[:IS_OWNER]-(MM)
+
+CREATE (AddressInfo:DataSet {
+	Name: "Correct address info"})<-[:IS_OWNER]-(MM)
 
 //Define data set consumer
 CREATE (MoCI)-[:IS_CONSUMING]->(PersonData)
