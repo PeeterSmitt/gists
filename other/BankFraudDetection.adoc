@@ -1,14 +1,6 @@
 
 
-== Bank Fraud Graph Data Model
 
-Graph databases have emerged as an ideal tool for overcoming these hurdles. Languages like Cypher provide a simple semantic for detecting rings in the graph, navigating connections in memory, in real time. 
-
-The graph data model below represents how the data actually looks to the graph database, and illustrates how one can find rings by simply walking the graph:
-
-image::https://raw.github.com/neo4j-contrib/gists/master/other/images/BankFraud-1.png[Bank Fraud]
-
-'''
 
 == Sample Data Set
 
@@ -26,10 +18,10 @@ CREATE (ROP:Organization {
 	Abbrevation: "ROP"})
 
 // Create DataSets
-CREATE (PersonData: DataSet {
+CREATE (PersonData:DataSet {
 	Name: "Person Data")}
 
-CREATE (CRData: DataSet {
+CREATE (CRData:DataSet {
 	Name: "CR Data")}
 
 // Define data set owner
