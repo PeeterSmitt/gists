@@ -84,7 +84,8 @@ RETURN *
 
 [source,cypher]
 ----
-MATCH (n:Organization)-[:IS_CONSUMING]->(m:DataSet)
+MATCH (o:Organization)
+WHERE (o)-[:IS_CONSUMING]-(DataSet)
 
 RETURN *
 ----
