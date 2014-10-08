@@ -61,6 +61,12 @@ CREATE (AddressInfo:DataSet {
 //Define data set consumer
 CREATE (MoCI)-[:IS_CONSUMING]->(PersonData)
 
+CREATE (MoMP)-[:IS_CONSUMING]->(PersonData)
+
+CREATE (MM)-[:IS_CONSUMING]->(PersonData)
+
+CREATE (SGT)-[:IS_CONSUMING]->(PersonData)
+
 RETURN *
 ----
 
