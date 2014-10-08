@@ -16,10 +16,29 @@ CREATE (MoCI:Organization {
 CREATE (ROP:Organization {
 	Name: "Royal Oman Police",
 	Abbrevation: "ROP"})
+	
+CREATE (MM:Organization {
+	Name: "Muscat Municiplaity",
+	Abbrevation: "MM"})
+	
+CREATE (MoMP:Organization {
+	Name: "Ministry of Manpower",
+	Abbrevation: "MoMP"})
+
+CREATE (SGT:Organization {
+	Name: "Secretariate General of Taxation",
+	Abbrevation: "SGT"})
+
+CREATE (OCCI:Organization {
+	Name: "Oman Chamber Of Commerce and Industry",
+	Abbrevation: "OCCI"})
 
 // Create DataSets
 CREATE (PersonData:DataSet {
 	Name: "Person Data"})
+
+CREATE (VisaInformation:DataSet {
+	Name: "Visa Information"})<-[:IS_OWNER]-(ROP)
 
 CREATE (CRData:DataSet {
 	Name: "CR Data"})
